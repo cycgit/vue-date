@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>日历</title>
+    <link rel="stylesheet" href="vue-date.css">
+</head>
+<body>
+    
+       
+    <div id="target">
+        
+        <vue-calendar :date.sync="time"></vue-calendar>
+<!--        <vue-calendar></vue-calendar>-->
+        
+        <h2>当前时间戳:{{time}}</h2>
+    </div>
+    
+    
+    
+
+        
+<script src="vue.min.js"></script>
+<script src="vue-date.js"></script> 
+<script>
+var calendar = window.components.calendar
+    
+var time1 = '1454509507'
+var time2 = '1454509507000'
+var time3 = '1454'
+new Vue({
+    el: '#target',
+    data:{
+        time: time2
+    },
+    methods:{
+        
+    },
+    components:{
+        'vue-calendar': calendar
+    }
+})
+
+
+</script>
+</body>
+</html>
